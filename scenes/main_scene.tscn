@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcnqhkhbqajja"]
+[gd_scene load_steps=5 format=3 uid="uid://bcnqhkhbqajja"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_b85a1"]
 [ext_resource type="PackedScene" uid="uid://dipxvnf3pb10y" path="res://scenes/pause_menu.tscn" id="1_wirt5"]
+[ext_resource type="PackedScene" uid="uid://c3f6thftalcng" path="res://scenes/draggable.tscn" id="3_rj334"]
+[ext_resource type="PackedScene" uid="uid://bhmyx40xgb1ik" path="res://scenes/drop_area.tscn" id="4_mfysc"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_b85a1")
@@ -28,4 +30,31 @@ process_mode = 2
 visible = false
 layout_mode = 1
 
+[node name="ColorRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+color = Color(0, 0.34, 0.283333, 1)
+
 [node name="Camera" type="Camera2D" parent="."]
+
+[node name="draggable" parent="." instance=ExtResource("3_rj334")]
+position = Vector2(-235, 134)
+
+[node name="DropArea" parent="." instance=ExtResource("4_mfysc")]
+position = Vector2(-235, -31)
+
+[node name="DropArea2" parent="." instance=ExtResource("4_mfysc")]
+position = Vector2(15, -44)
+
+[node name="DropArea3" parent="." instance=ExtResource("4_mfysc")]
+position = Vector2(-6, 161)
