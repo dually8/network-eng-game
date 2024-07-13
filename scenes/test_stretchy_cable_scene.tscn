@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgh50utdunxbj"]
+
+[ext_resource type="PackedScene" uid="uid://dmmabi2yb2gi1" path="res://scenes/line_controller.tscn" id="1_41q0u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_craxp"]
+size = Vector2(100, 100)
+
+[node name="TestStretchyCableScene" type="Node2D"]
+
+[node name="LineController" parent="." instance=ExtResource("1_41q0u")]
+
+[node name="DroppableA" type="Area2D" parent="." groups=["droppable"]]
+position = Vector2(158, 102)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DroppableA"]
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="DroppableA"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DroppableB" type="Area2D" parent="." groups=["droppable"]]
+position = Vector2(997, 538)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DroppableB"]
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="DroppableB"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
