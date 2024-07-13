@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://0khaquojhowf"
+path="res://.godot/imported/Lo-Fi Neon Lounge Main.wav-5284de68696959bbeb95b2b403cde38f.sample"
+
+[deps]
+
+source_file="res://Music/Lo-Fi Neon Lounge Main.wav"
+dest_files=["res://.godot/imported/Lo-Fi Neon Lounge Main.wav-5284de68696959bbeb95b2b403cde38f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

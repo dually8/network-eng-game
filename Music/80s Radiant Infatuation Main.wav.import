@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b3083d3fqb6hw"
+path="res://.godot/imported/80s Radiant Infatuation Main.wav-e57c537fb1838f3e85d8aed8f781bb10.sample"
+
+[deps]
+
+source_file="res://Music/80s Radiant Infatuation Main.wav"
+dest_files=["res://.godot/imported/80s Radiant Infatuation Main.wav-e57c537fb1838f3e85d8aed8f781bb10.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
