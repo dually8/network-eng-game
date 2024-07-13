@@ -1,4 +1,4 @@
-extends StaticBody2D
+class_name DropArea extends StaticBody2D
 
 func _ready() -> void:
 	modulate = Color(Color.ROYAL_BLUE, 0.75)
