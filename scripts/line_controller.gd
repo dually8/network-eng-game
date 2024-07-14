@@ -3,6 +3,9 @@ class_name LineController extends Node2D
 @export var line_width: float = 4.0
 @export var line_color: Color = Color(1, 0, 0)
 @export var point_size: float = 100.0 # Size for hit detection
+@export var stiffness: float = 15.0
+@export var damping: float = 0.1
+@export var control_point_distance: float = 50.0
 
 @onready var line: Line2D = %Line2D
 @onready var pointA: Node2D = %PointA
@@ -12,10 +15,13 @@ class_name LineController extends Node2D
 
 var dragging_point: Node2D = null
 var point_area: Area2D = null
+var velocity: Vector2 = Vector2.ZERO
+var control_point: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
 	line.default_color = line_color
 	line.width = line_width
+	control_point = (pointA.global_position + pointB.global_position) / 2
 	update_line()
 	add_indicator(pointA)
 	add_indicator(pointB)
@@ -23,6 +29,21 @@ func _ready() -> void:
 	areaA.area_exited.connect(_on_area_exitedA)
 	areaB.area_entered.connect(_on_area_enteredB)
 	areaB.area_exited.connect(_on_area_exitedB)
+
+func _process(delta: float) -> void:
+	# Calculate midpoint between points
+	var midpoint: Vector2 = (pointA.global_position + pointB.global_position) / 2
+	# Calculate the force to move the control point towards the midpoint
+	var force: Vector2 = midpoint - control_point
+	force *= stiffness
+	# Apply the force to the control point's velocity
+	velocity += force * delta
+	# Apply damping to the velocity
+	velocity *= 1 - damping * delta
+	# Update the control point's position based on the velocity
+	control_point += velocity * delta
+	# Update the line
+	update_line()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -45,8 +66,17 @@ func _input(event: InputEvent) -> void:
 		update_line()
 
 func update_line() -> void:
+	# Clear all points
 	line.clear_points()
+	# Add the first point (A)
 	line.add_point(to_local(pointA.global_position))
+	# Add 3 control points to create bending effect
+	var control_point_offsetA = (control_point - pointA.global_position).normalized() * control_point_distance
+	line.add_point(to_local(pointA.global_position + control_point_offsetA))
+	line.add_point(to_local(control_point))
+	var control_point_offsetB = (control_point - pointB.global_position).normalized() * control_point_distance
+	line.add_point(to_local(pointB.global_position + control_point_offsetB))
+	# Add the last point (B)
 	line.add_point(to_local(pointB.global_position))
 
 func get_children_in_group(node: Node2D, group_name: String) -> Array:
