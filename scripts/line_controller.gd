@@ -3,8 +3,8 @@ class_name LineController extends Node2D
 @export var line_width: float = 4.0
 @export var line_color: Color = Color(1, 0, 0)
 @export var point_size: float = 100.0 # Size for hit detection
-@export var stiffness: float = 15.0
-@export var damping: float = 0.1
+@export var stiffness: float = 20.0
+@export var damping: float = 2.0
 @export var control_point_distance: float = 50.0
 
 @onready var line: Line2D = %Line2D
