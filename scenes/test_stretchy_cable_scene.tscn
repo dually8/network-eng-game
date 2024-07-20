@@ -1,13 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgh50utdunxbj"]
+[gd_scene load_steps=5 format=3 uid="uid://cgh50utdunxbj"]
 
 [ext_resource type="PackedScene" uid="uid://dmmabi2yb2gi1" path="res://scenes/line_controller.tscn" id="1_41q0u"]
+[ext_resource type="Texture2D" uid="uid://bniusqslrbohy" path="res://sprites/switch.png" id="2_xsmbs"]
+[ext_resource type="Texture2D" uid="uid://c4gjc6uypyn55" path="res://sprites/PatchPanel.png" id="3_b47qq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_craxp"]
-size = Vector2(100, 100)
+size = Vector2(60, 60)
 
 [node name="TestStretchyCableScene" type="Node2D"]
 
 [node name="LineController" parent="." instance=ExtResource("1_41q0u")]
+position = Vector2(912, 101)
 
 [node name="DroppableA" type="Area2D" parent="." groups=["droppable"]]
 position = Vector2(158, 102)
@@ -27,6 +30,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="DroppableB" type="Area2D" parent="." groups=["droppable"]]
 position = Vector2(997, 538)
@@ -46,3 +50,1384 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Switch" type="Sprite2D" parent="."]
+position = Vector2(464, 499)
+texture = ExtResource("2_xsmbs")
+
+[node name="DroppableB3" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-243, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB3"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB3"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB4" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-283, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB4"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB4"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB5" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-203, -30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB5"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB5"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB6" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-163, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB6"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB6"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB7" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-123, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB7"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB7"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB8" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-83, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB8"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB8"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB9" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-43, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB9"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB9"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB10" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-3, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB10"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB10"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB11" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(37, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB11"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB11"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB12" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(77, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB12"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB12"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB13" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(117, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB13"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB13"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB14" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(157, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB14"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB14"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB15" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(197, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB15"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB15"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB16" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(237, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB16"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB16"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB17" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(277, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB17"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB17"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB18" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-707, -530)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB18"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB18"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB19" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-283, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB19"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB19"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB20" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-243, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB20"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB20"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB21" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-203, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB21"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB21"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB22" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-163, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB22"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB22"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB23" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-123, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB23"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB23"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB24" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-83, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB24"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB24"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB25" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-43, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB25"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB25"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB26" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(-3, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB26"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB26"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB27" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(37, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB27"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB27"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB28" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(77, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB28"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB28"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB29" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(117, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB29"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB29"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB30" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(157, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB30"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB30"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB31" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(197, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB31"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB31"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB32" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(237, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB32"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB32"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableB33" type="Area2D" parent="Switch" groups=["droppable"]]
+position = Vector2(277, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/DroppableB33"]
+position = Vector2(-2, -4)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="Switch/DroppableB33"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="PatchPanel" type="Sprite2D" parent="."]
+position = Vector2(464, 349)
+texture = ExtResource("3_b47qq")
+
+[node name="DroppableA2" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-283, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA2"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA3" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-243, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA3"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA3"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA4" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-203, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA4"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA4"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA5" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-163, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA5"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA5"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA6" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-123, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA6"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA6"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA7" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-83, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA7"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA7"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA8" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-43, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA8"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA8"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA9" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-3, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA9"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA9"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA10" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(37, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA10"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA10"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA11" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(77, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA11"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA11"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA12" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(117, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA12"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA12"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA13" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(157, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA13"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA13"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA14" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(197, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA14"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA14"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA15" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(237, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA15"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA15"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA16" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(277, -35)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA16"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA16"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA17" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-283, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA17"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA17"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA18" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-243, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA18"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA18"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA19" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-203, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA19"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA19"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA20" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-163, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA20"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA20"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA21" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-123, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA21"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA21"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA22" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-83, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA22"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA22"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA23" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-43, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA23"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA23"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA24" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(-3, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA24"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA24"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA25" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(37, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA25"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA25"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA26" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(77, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA26"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA26"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA27" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(117, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA27"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA27"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA28" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(157, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA28"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA28"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA29" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(197, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA29"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA29"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA30" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(237, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA30"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA30"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DroppableA31" type="Area2D" parent="PatchPanel" groups=["droppable"]]
+position = Vector2(277, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatchPanel/DroppableA31"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_craxp")
+
+[node name="ColorRect" type="ColorRect" parent="PatchPanel/DroppableA31"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
